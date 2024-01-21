@@ -1,0 +1,69 @@
+.character svg {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.character #character #head {
+    animation: Breathe 8s infinite;
+}
+
+.character #character #head #eyes {
+    transform-origin: 0% 27%;
+    animation: Blink 8s infinite;
+}
+
+.character #character #head #eyes #eye-1 #pupil_2,
+.character #character #head #eyes #eye-2 #pupil {
+    transition: 200ms linear;
+}
+
+.character #character #arms #arm-1 {
+    transform-origin: 20% 45%;
+    animation: Hello 1500ms;
+    animation-delay: 1s;
+}
+
+@keyframes Breathe {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Blink {
+    0% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(1);
+    }
+    97.25% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes Hello {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(145deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(145deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

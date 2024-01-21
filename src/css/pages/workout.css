@@ -1,0 +1,20 @@
+.workout .images img {
+    max-width: 20vw;
+    max-height: 50vh;
+}
+
+.workout .progress-bar {
+    width: 80vw;
+    height: 20px;
+    background: rgb(236, 228, 228);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.workout .progress-bar .progress-cursor {
+    width: 100%;
+    height: 100%;
+    background: rgb(104, 104, 221);
+    transform-origin: left;
+    transition: transform 200ms ease-out;
+}
