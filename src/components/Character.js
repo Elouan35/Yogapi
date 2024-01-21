@@ -752,6 +752,9 @@ const Character = () => {
     }, []);
 
     window.addEventListener("mousemove", (e) => {
+        var positions;
+        var px;
+
         if (document.querySelector("#character")) {
             const eye1 = document.querySelector(
                 ".character #character #head #eyes #eye-1 #pupil_2"
@@ -763,24 +766,24 @@ const Character = () => {
 
             var x = e.clientX;
 
-            var positions = eye1.getBoundingClientRect();
+            positions = eye1.getBoundingClientRect();
             positions.x += positions.width / 2;
 
             if (x - positions.x > 0) {
-                var px = (x - positions.x) / (window.innerWidth - positions.x);
+                px = (x - positions.x) / (window.innerWidth - positions.x);
             } else {
-                var px = ((x - positions.x) / positions.x) * 5;
+                px = ((x - positions.x) / positions.x) * 5;
             }
 
             eye1.style.transform = `translateX(${px}%)`;
 
-            var positions = eye2.getBoundingClientRect();
+            positions = eye2.getBoundingClientRect();
 
             if (x - positions.x > 0) {
-                var px =
+                px =
                     ((x - positions.x) / (window.innerWidth - positions.x)) * 5;
             } else {
-                var px = (x - positions.x) / positions.x;
+                px = (x - positions.x) / positions.x;
             }
 
             eye2.style.transform = `translateX(${px}%)`;
