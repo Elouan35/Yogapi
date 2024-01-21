@@ -762,7 +762,6 @@ const Character = () => {
             );
 
             var x = e.clientX;
-            var y = e.clientY;
 
             var positions = eye1.getBoundingClientRect();
             positions.x += positions.width / 2;
