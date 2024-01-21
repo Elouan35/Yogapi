@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Yogapi/static/css/main.b9967122.css",
-    "main.js": "/Yogapi/static/js/main.c75cb827.js",
+    "main.js": "/Yogapi/static/js/main.2bb12ad7.js",
     "index.html": "/Yogapi/index.html",
     "main.b9967122.css.map": "/Yogapi/static/css/main.b9967122.css.map",
-    "main.c75cb827.js.map": "/Yogapi/static/js/main.c75cb827.js.map"
+    "main.2bb12ad7.js.map": "/Yogapi/static/js/main.2bb12ad7.js.map"
   },
   "entrypoints": [
     "static/css/main.b9967122.css",
-    "static/js/main.c75cb827.js"
+    "static/js/main.2bb12ad7.js"
   ]
 }
