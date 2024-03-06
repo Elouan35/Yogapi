@@ -66,7 +66,7 @@ const Workout = () => {
                 {images.map((image) => (
                     <img
                         key={image + 1}
-                        src={`Images/Workout/Positions/${image + 1}.png`}
+                        src={`./Images/Workout/Positions/${image + 1}.png`}
                         alt=""
                         style={{
                             display:

@@ -1,0 +1,37 @@
+.home {
+    width: 100%;
+    height: 100vh;
+}
+
+.home header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.home .start-workout {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .start-workout .character {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .start-workout a button {
+    background: #ffd600;
+    border: none;
+    margin-top: 5vh;
+    font-size: 3vh;
+    padding: 2vh 4vw;
+    border-radius: 10px;
+}

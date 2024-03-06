@@ -1,16 +1,16 @@
 .character svg {
-    max-width: 100%;
-    max-height: 100vh;
+    max-width: 60%;
+    max-height: 70vh;
     overflow: visible;
 }
 
 .character #character #head {
-    animation: Breathe 8s infinite;
+    animation: Breathe 6s infinite;
 }
 
 .character #character #head #eyes {
     transform-origin: 0% 27%;
-    animation: Blink 8s infinite;
+    animation: Blink 4s infinite;
 }
 
 .character #character #head #eyes #eye-1 #pupil_2,
@@ -29,7 +29,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-1%);
+        transform: translateY(-1.5%);
     }
     100% {
         transform: translateY(0);

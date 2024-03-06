@@ -1,10 +1,11 @@
 import React from "react";
+import { ReactComponent as GemImage } from "../Images/Elements/Gem.svg";
 
 const Gem = () => {
     return (
         <div className="gem-bar">
             <p>20</p>
-            <img src="Images/Elements/Gem.svg" alt="20 Gems" />
+            <GemImage className="gem" />
         </div>
     );
 };

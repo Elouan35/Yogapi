@@ -12,10 +12,12 @@ const Home = () => {
                 </div>
                 <Gem />
             </header>
-            <Character />
-            <Link to="/workout">
-                <button>Commencer la session</button>
-            </Link>
+            <div className="start-workout">
+                <Character />
+                <Link to="/workout">
+                    <button>Commencer la session</button>
+                </Link>
+            </div>
         </section>
     );
 };
