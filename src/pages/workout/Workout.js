@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Character from "../../components/Character";
 import { ReactComponent as Hand } from "../../Images/Characters/hand.svg";
 import { ReactComponent as Flower } from "../../Images/Elements/Flower.svg";
+import { ReactComponent as TimerFlower } from "../../Images/Elements/TimerFlower.svg";
 import { ReactComponent as Play } from "../../Images/Icons/play.svg";
 import { ReactComponent as Pause } from "../../Images/Icons/pause.svg";
+import PopUpMenu from "../../components/PopUpMenu";
 
 const Workout = () => {
     const navigate = useNavigate();
@@ -82,8 +84,16 @@ const Workout = () => {
         return () => clearInterval(interval);
     }, [timerOn, seconds, position, timerStyle, navigate]);
 
+    const displayPopUpmenu = () => {
+        if (timerOn === false) {
+            return <PopUpMenu setTimerOn={setTimerOn} navigate={navigate} />;
+        }
+    };
+
     return (
         <section className="workout">
+            {displayPopUpmenu()}
+
             <button
                 className="play"
                 onClick={() => {
@@ -93,7 +103,10 @@ const Workout = () => {
                 {timerOn ? <Pause /> : <Play />}
             </button>
 
-            <p>{seconds}</p>
+            <div className="timer-flower">
+                <p>{seconds}</p>
+                <TimerFlower className="flower" />
+            </div>
 
             <div className="display">
                 <Character />

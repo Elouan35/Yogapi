@@ -11,6 +11,29 @@
     position: fixed;
     top: 2vh;
     left: 2vh;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1000;
+}
+
+.workout .play svg {
+    height: 4vh;
+}
+
+.workout .timer-flower {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout .timer-flower p {
+    font-size: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .workout .display {
