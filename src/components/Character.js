@@ -47,7 +47,7 @@ const Character = () => {
 
                 if (y - positions.y < 0) {
                     py = ((y - positions.y) / positions.y) * 2;
-                    sy = 1 + ((y - positions.y) / positions.y) * 0.08;
+                    sy = 1;
                 } else {
                     py = 0;
                     sy = 1 - ((y - positions.y) / positions.y) * 0.08;
