@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Yogapi/static/css/main.9856bf23.css",
-    "main.js": "/Yogapi/static/js/main.1e7fe1f4.js",
+    "main.css": "/Yogapi/static/css/main.26489f5c.css",
+    "main.js": "/Yogapi/static/js/main.193050ae.js",
     "static/media/FredokaOne-Regular.ttf": "/Yogapi/static/media/FredokaOne-Regular.4aea26dd6637dfac0fac.ttf",
-    "static/media/character-wonder.svg": "/Yogapi/static/media/character-wonder.5bffb173dc0825db25a585b88a0d3351.svg",
-    "static/media/character-simple.svg": "/Yogapi/static/media/character-simple.e51ca0eaa0cfba32e4c293e186b42d5e.svg",
+    "static/media/character-wonder.svg": "/Yogapi/static/media/character-wonder.3291f961f8c50f6fa93ad109e401fc72.svg",
+    "static/media/character-simple.svg": "/Yogapi/static/media/character-simple.57c679b593e4f775040dcf7ec75da23c.svg",
     "static/media/Gem.svg": "/Yogapi/static/media/Gem.4b59a0a39bd148d073f7272d555ba640.svg",
     "static/media/shop.svg": "/Yogapi/static/media/shop.63720948554bd0d0dcf2cebbd6c6ac29.svg",
     "static/media/exercise.svg": "/Yogapi/static/media/exercise.e220acacbfc9aa1d7c097de0ff43ff8d.svg",
     "index.html": "/Yogapi/index.html",
     "static/media/preference.svg": "/Yogapi/static/media/preference.27ab87791bd91feaf51a11d13ff5d9f7.svg",
     "static/media/home.svg": "/Yogapi/static/media/home.f1054e4620856a8b3667c31db4cc1ae1.svg",
-    "main.9856bf23.css.map": "/Yogapi/static/css/main.9856bf23.css.map",
-    "main.1e7fe1f4.js.map": "/Yogapi/static/js/main.1e7fe1f4.js.map"
+    "main.26489f5c.css.map": "/Yogapi/static/css/main.26489f5c.css.map",
+    "main.193050ae.js.map": "/Yogapi/static/js/main.193050ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.9856bf23.css",
-    "static/js/main.1e7fe1f4.js"
+    "static/css/main.26489f5c.css",
+    "static/js/main.193050ae.js"
   ]
 }
