@@ -10,41 +10,60 @@ const Character = () => {
     }, []);
 
     window.addEventListener("mousemove", (e) => {
-        var positions;
-        var px;
-
         if (document.querySelector("#character")) {
-            const eye1 = document.querySelector(
-                ".character #character #head #eyes #eye-1 #pupil_2"
-            );
+            var px;
+            var py;
+            var sy;
 
-            const eye2 = document.querySelector(
-                ".character #character #head #eyes #eye-2 #pupil"
-            );
+            for (var i = 1; i < 3; i++) {
+                var eye = document.querySelector(
+                    `.character #character #head #eyes #eye-${i} #pupil`
+                );
 
-            var x = e.clientX;
+                var x = e.clientX;
+                var y = e.clientY;
 
-            positions = eye1.getBoundingClientRect();
-            positions.x += positions.width / 2;
+                var positions = eye.getBoundingClientRect();
+                positions.x += positions.width / 2;
 
-            if (x - positions.x > 0) {
-                px = (x - positions.x) / (window.innerWidth - positions.x);
-            } else {
-                px = ((x - positions.x) / positions.x) * 5;
+                if (i === 1) {
+                    if (x - positions.x > 0) {
+                        px =
+                            (x - positions.x) /
+                            (window.innerWidth - positions.x);
+                    } else {
+                        px = ((x - positions.x) / positions.x) * 5;
+                    }
+                } else {
+                    if (x - positions.x > 0) {
+                        px =
+                            ((x - positions.x) /
+                                (window.innerWidth - positions.x)) *
+                            5;
+                    } else {
+                        px = (x - positions.x) / positions.x;
+                    }
+                }
+
+                if (y - positions.y < 0) {
+                    py = ((y - positions.y) / positions.y) * 2;
+                    sy = 1 + ((y - positions.y) / positions.y) * 0.08;
+                } else {
+                    py = 0;
+                    sy = 1 - ((y - positions.y) / positions.y) * 0.08;
+                }
+
+                const keyframes = {
+                    transform: `translate(${Math.round(px * 10000) / 10000}%, ${
+                        Math.round(py * 10000) / 10000
+                    }%) scaleY(${Math.round(sy * 10000) / 10000})`,
+                };
+
+                eye.animate(keyframes, {
+                    duration: 800,
+                    fill: "forwards",
+                });
             }
-
-            eye1.style.transform = `translateX(${px}%)`;
-
-            positions = eye2.getBoundingClientRect();
-
-            if (x - positions.x > 0) {
-                px =
-                    ((x - positions.x) / (window.innerWidth - positions.x)) * 5;
-            } else {
-                px = (x - positions.x) / positions.x;
-            }
-
-            eye2.style.transform = `translateX(${px}%)`;
         }
     });
 
