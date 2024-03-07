@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Character from "../../components/Character";
+import { ReactComponent as Hand } from "../../Images/Characters/hand.svg";
+import { ReactComponent as Flower } from "../../Images/Elements/Flower.svg";
+import { ReactComponent as Play } from "../../Images/Icons/play.svg";
+import { ReactComponent as Pause } from "../../Images/Icons/pause.svg";
 
 const Workout = () => {
     const navigate = useNavigate();
 
-    const workoutDuration = 5;
-    const breakDuration = 2;
+    const workoutDuration = 45;
+    const breakDuration = 5;
     const maxPosition = 10;
 
     const [seconds, setSeconds] = useState(workoutDuration);
@@ -18,6 +22,24 @@ const Workout = () => {
     const maxSeconds = maxPosition * workoutDuration;
 
     useEffect(() => {
+        // Demande un verrouillage d'écran
+        navigator.wakeLock
+            .request("screen")
+            .then((wakeLock) => {
+                console.log("Le verrouillage d'écran a été activé.");
+
+                // Maintient le verrouillage d'écran actif
+                wakeLock.addEventListener("release", () => {
+                    console.log("Le verrouillage d'écran a été libéré.");
+                });
+            })
+            .catch((error) => {
+                console.error(
+                    "Erreur lors de l'activation du verrouillage d'écran :",
+                    error
+                );
+            });
+
         let temp = [];
         for (var i = 0; i < maxPosition; i++) {
             temp.push(i);
@@ -62,51 +84,93 @@ const Workout = () => {
 
     return (
         <section className="workout">
-            <p>{seconds}</p>
-
-            <div className="display">
-                <Character />
-                <div className="images">
-                    {images.map((image) => (
-                        <img
-                            key={image + 1}
-                            src={`./Images/Workout/Positions/${image + 1}.png`}
-                            alt=""
-                            style={{
-                                display:
-                                    images.indexOf(image) === position
-                                        ? "block"
-                                        : "none",
-                            }}
-                        />
-                    ))}
-                </div>
-            </div>
-
-            <div className="progress-bar">
-                <div
-                    className="progress-cursor"
-                    style={{
-                        transform:
-                            timerStyle === "break"
-                                ? `scaleX(${position / maxPosition})`
-                                : `scaleX(${
-                                      (position * workoutDuration +
-                                          (workoutDuration - seconds)) /
-                                      maxSeconds
-                                  })`,
-                    }}
-                ></div>
-            </div>
-
             <button
                 className="play"
                 onClick={() => {
                     setTimerOn(!timerOn);
                 }}
             >
-                {timerOn ? "Pause" : "Play"}
+                {timerOn ? <Pause /> : <Play />}
             </button>
+
+            <p>{seconds}</p>
+
+            <div className="display">
+                <Character />
+                <div className="images">
+                    <div className="images-box">
+                        {images.map((image) => (
+                            <img
+                                key={image + 1}
+                                src={`./Images/Workout/Positions/${
+                                    image + 1
+                                }.png`}
+                                alt=""
+                                style={{
+                                    display:
+                                        images.indexOf(image) === position
+                                            ? "block"
+                                            : "none",
+                                }}
+                            />
+                        ))}
+                        <Hand
+                            className="left-hand"
+                            onClick={() => {
+                                if (position > 0) {
+                                    setTimerStyle("break");
+                                    setSeconds(breakDuration);
+                                    setPosition(position - 1);
+                                    setTimerOn(true);
+                                }
+                            }}
+                        />
+                        <Hand
+                            className="right-hand"
+                            onClick={() => {
+                                if (position < maxPosition - 1) {
+                                    setTimerStyle("break");
+                                    setSeconds(breakDuration);
+                                    setPosition(position + 1);
+                                    setTimerOn(true);
+                                }
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="progress">
+                <div className="progress-bar">
+                    <div
+                        className="progress-cursor"
+                        style={{
+                            transform:
+                                timerStyle === "break"
+                                    ? `scaleX(${position / maxPosition})`
+                                    : `scaleX(${
+                                          (position * workoutDuration +
+                                              (workoutDuration - seconds)) /
+                                          maxSeconds
+                                      })`,
+                        }}
+                    ></div>
+                </div>
+                <Flower
+                    className="flower"
+                    style={{
+                        left:
+                            timerStyle === "break"
+                                ? `${(position / maxPosition) * 100}%`
+                                : `${
+                                      ((position * workoutDuration +
+                                          (workoutDuration - seconds)) /
+                                          maxSeconds) *
+                                      100
+                                  }%`,
+                    }}
+                />
+            </div>
         </section>
     );
 };
