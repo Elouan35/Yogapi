@@ -7,6 +7,7 @@ const Shop = () => {
             <header>
                 <h1>Boutique</h1>
                 <Gem />
+                <img src="./Images/travaux.gif" alt="Travaux en cours" />
             </header>
         </section>
     );

@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.gem-bar p {
+    margin-right: 1vw;
+}
+
 .gem {
     height: 4vh;
 }

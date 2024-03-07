@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+:root {
+    /* COLORS */
+    --main-color: white;
+    --button-color: #ffd600;
+    --grey-color: #d0d8e0;
+    --orange-color: #ff8a00;
+    --font-color-important: #0b1345;
+}
+
 h1,
 h2,
 h3,
@@ -12,6 +21,7 @@ button,
 li,
 p {
     font-family: Fredoka;
+    color: black;
 }
 
 p {
@@ -24,5 +34,4 @@ button {
 
 a {
     text-decoration: none;
-    color: #000;
 }
