@@ -69,6 +69,12 @@
     align-items: center;
 }
 
+.home .start-workout .images .character #character #arms #arm-1 {
+    transform-origin: 20% 45%;
+    animation: Hello 1s;
+    animation-delay: 1s;
+}
+
 .home .start-workout .images .background {
     width: 80vw;
     max-height: 60vh;

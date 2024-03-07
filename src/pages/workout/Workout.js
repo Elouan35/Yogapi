@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Character from "../../components/Character";
 
 const Workout = () => {
     const navigate = useNavigate();
@@ -57,26 +58,31 @@ const Workout = () => {
         }
 
         return () => clearInterval(interval);
-    }, [timerOn, seconds, position, timerStyle]);
+    }, [timerOn, seconds, position, timerStyle, navigate]);
 
     return (
         <section className="workout">
             <p>{seconds}</p>
-            <div className="images">
-                {images.map((image) => (
-                    <img
-                        key={image + 1}
-                        src={`./Images/Workout/Positions/${image + 1}.png`}
-                        alt=""
-                        style={{
-                            display:
-                                images.indexOf(image) === position
-                                    ? "block"
-                                    : "none",
-                        }}
-                    />
-                ))}
+
+            <div className="display">
+                <Character />
+                <div className="images">
+                    {images.map((image) => (
+                        <img
+                            key={image + 1}
+                            src={`./Images/Workout/Positions/${image + 1}.png`}
+                            alt=""
+                            style={{
+                                display:
+                                    images.indexOf(image) === position
+                                        ? "block"
+                                        : "none",
+                            }}
+                        />
+                    ))}
+                </div>
             </div>
+
             <div className="progress-bar">
                 <div
                     className="progress-cursor"
@@ -92,6 +98,7 @@ const Workout = () => {
                     }}
                 ></div>
             </div>
+
             <button
                 className="play"
                 onClick={() => {
