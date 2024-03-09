@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Yogapi/static/css/main.b7f4f517.css",
-    "main.js": "/Yogapi/static/js/main.c547bfcc.js",
+    "main.css": "/Yogapi/static/css/main.803c0317.css",
+    "main.js": "/Yogapi/static/js/main.e1608499.js",
     "static/media/FredokaOne-Regular.ttf": "/Yogapi/static/media/FredokaOne-Regular.4aea26dd6637dfac0fac.ttf",
     "static/media/character-wonder.svg": "/Yogapi/static/media/character-wonder.3291f961f8c50f6fa93ad109e401fc72.svg",
     "static/media/character-simple.svg": "/Yogapi/static/media/character-simple.57c679b593e4f775040dcf7ec75da23c.svg",
@@ -10,18 +10,18 @@
     "static/media/Gem.svg": "/Yogapi/static/media/Gem.4b59a0a39bd148d073f7272d555ba640.svg",
     "static/media/Flower.svg": "/Yogapi/static/media/Flower.f654e757ae51d326152dd209d95497a6.svg",
     "static/media/shop.svg": "/Yogapi/static/media/shop.63720948554bd0d0dcf2cebbd6c6ac29.svg",
-    "static/media/exercise.svg": "/Yogapi/static/media/exercise.e220acacbfc9aa1d7c097de0ff43ff8d.svg",
     "index.html": "/Yogapi/index.html",
+    "static/media/exercise.svg": "/Yogapi/static/media/exercise.e220acacbfc9aa1d7c097de0ff43ff8d.svg",
     "static/media/pause.svg": "/Yogapi/static/media/pause.a676601dbc3843f8eff0ef113c3eff26.svg",
     "static/media/preference.svg": "/Yogapi/static/media/preference.27ab87791bd91feaf51a11d13ff5d9f7.svg",
     "static/media/home.svg": "/Yogapi/static/media/home.f1054e4620856a8b3667c31db4cc1ae1.svg",
     "static/media/hand.svg": "/Yogapi/static/media/hand.056baa845e935c69c4d8e03dbcfd1df1.svg",
     "static/media/play.svg": "/Yogapi/static/media/play.44cb6508a9227bd04b0c2f3fa4819eb3.svg",
-    "main.b7f4f517.css.map": "/Yogapi/static/css/main.b7f4f517.css.map",
-    "main.c547bfcc.js.map": "/Yogapi/static/js/main.c547bfcc.js.map"
+    "main.803c0317.css.map": "/Yogapi/static/css/main.803c0317.css.map",
+    "main.e1608499.js.map": "/Yogapi/static/js/main.e1608499.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7f4f517.css",
-    "static/js/main.c547bfcc.js"
+    "static/css/main.803c0317.css",
+    "static/js/main.e1608499.js"
   ]
 }
