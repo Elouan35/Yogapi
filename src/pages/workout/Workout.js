@@ -7,9 +7,12 @@ import { ReactComponent as TimerFlower } from "../../Images/Elements/TimerFlower
 import { ReactComponent as Play } from "../../Images/Icons/play.svg";
 import { ReactComponent as Pause } from "../../Images/Icons/pause.svg";
 import PopUpMenu from "../../components/PopUpMenu";
+import { wait } from "@testing-library/user-event/dist/utils";
 
 const Workout = () => {
     const navigate = useNavigate();
+
+    const switchSong = new Audio("Audio/Ding.wav");
 
     const workoutDuration = 45;
     const breakDuration = 5;
@@ -70,6 +73,7 @@ const Workout = () => {
                             setPosition((prevPosition) => prevPosition + 1);
                             setSeconds(breakDuration);
                             setTimerStyle("break");
+                            switchSong.play();
                         } else {
                             setSeconds(workoutDuration);
                             setTimerStyle("workout");
