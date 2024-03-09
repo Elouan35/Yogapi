@@ -40,7 +40,9 @@ const Home = () => {
                     <Background className="background" />
                 </div>
                 <Link to="/workout">
-                    <button>Commencer la session</button>
+                    <button className="main-button">
+                        Commencer la session
+                    </button>
                 </Link>
             </div>
         </section>

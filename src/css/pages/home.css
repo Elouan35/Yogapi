@@ -86,10 +86,5 @@
 }
 
 .home .start-workout a button {
-    background: var(--button-color);
-    border: none;
     margin-top: 5vh;
-    font-size: 3vh;
-    padding: 2vh 4vw;
-    border-radius: 10px;
 }

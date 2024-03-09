@@ -5,6 +5,7 @@ const PopUpMenu = ({ setTimerOn, navigate }) => {
         <div className="pop-up-menu">
             <div className="box">
                 <button
+                    className="main-button"
                     onClick={() => {
                         setTimerOn(true);
                     }}
@@ -12,6 +13,7 @@ const PopUpMenu = ({ setTimerOn, navigate }) => {
                     Reprendre
                 </button>
                 <button
+                    className="main-button"
                     onClick={() => {
                         setTimerOn(false);
                         navigate("/");

@@ -6,6 +6,7 @@ import Shop from "./pages/nav-pages/Shop";
 import Workout from "./pages/workout/Workout";
 import Nav from "./components/Nav";
 import Preferences from "./pages/nav-pages/Preferences";
+import WorkoutCompleted from "./pages/workout/WorkoutCompleted";
 
 const App = () => {
     return (
@@ -18,6 +19,10 @@ const App = () => {
                     <Route path="shop" element={<Shop />} />
                 </Route>
                 <Route path="/workout" element={<Workout />} />
+                <Route
+                    path="/workout-completed"
+                    element={<WorkoutCompleted />}
+                />
             </Routes>
         </>
     );

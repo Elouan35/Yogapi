@@ -36,3 +36,11 @@ button {
 a {
     text-decoration: none;
 }
+
+.main-button {
+    background: var(--button-color);
+    border: none;
+    font-size: 3vh;
+    padding: 2vh 4vw;
+    border-radius: 10px;
+}

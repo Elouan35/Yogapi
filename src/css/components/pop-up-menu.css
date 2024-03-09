@@ -22,10 +22,5 @@
 
 .pop-up-menu .box button {
     width: 100%;
-    background: var(--button-color);
-    border: none;
-    font-size: 3vh;
     margin-bottom: 3vh;
-    padding: 2vh 4vw;
-    border-radius: 10px;
 }

@@ -57,10 +57,10 @@ const Workout = () => {
                 seconds <= 0 &&
                 timerStyle === "workout"
             ) {
-                setTimerOn(false);
                 setTimeout(() => {
-                    navigate("/");
-                }, 2000);
+                    setTimerOn(false);
+                    navigate("/workout-completed");
+                }, 1000);
             } else {
                 interval = setInterval(() => {
                     setSeconds((prevSeconds) => prevSeconds - 1);
@@ -105,7 +105,7 @@ const Workout = () => {
 
             <div className="timer-flower">
                 <p>{seconds}</p>
-                <TimerFlower className="flower" />
+                <TimerFlower className={`flower ${timerStyle}-style`} />
             </div>
 
             <div className="display">

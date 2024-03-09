@@ -36,6 +36,22 @@
     transform: translate(-50%, -50%);
 }
 
+.workout .timer-flower .flower circle {
+    transition: 500ms ease-out;
+}
+
+.workout .timer-flower .flower path {
+    transition: 500ms ease-out;
+}
+
+.workout .timer-flower .flower.break-style circle {
+    fill: #89a9fb;
+}
+
+.workout .timer-flower .flower.break-style path {
+    fill: #4176ff;
+}
+
 .workout .display {
     position: relative;
     display: flex;
