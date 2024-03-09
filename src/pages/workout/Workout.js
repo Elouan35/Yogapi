@@ -11,7 +11,7 @@ import PopUpMenu from "../../components/PopUpMenu";
 const Workout = () => {
     const navigate = useNavigate();
 
-    const switchSong = new Audio("Audio/Ding.wav");
+    const switchSong = new Audio("./Audio/Ding.wav");
 
     const workoutDuration = 45;
     const breakDuration = 5;

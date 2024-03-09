@@ -1,27 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Character from "../../components/Character";
 import { useNavigate } from "react-router-dom";
+import Gem from "../../components/Gem";
 
 const WorkoutCompleted = () => {
     const navigate = useNavigate();
+    const [gemsToAdd, setGemsToAdd] = useState(0);
+
+    const series = parseInt(localStorage.getItem("series"));
+    const gems = parseInt(localStorage.getItem("gems"));
+    const gemsToAddCalc = 10 * ((series % 6) + 1);
 
     const addGems = () => {
-        var series = parseInt(localStorage.getItem("series"));
-        var gems = parseInt(localStorage.getItem("gems"));
-        localStorage.setItem("gems", `${gems + 10 * (series % 7)}`);
+        localStorage.setItem("gems", `${gems + gemsToAdd}`);
     };
 
     useEffect(() => {
         var storageDate = localStorage.getItem("date");
         if (storageDate) {
             var date = new Date();
-            var strDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+            var strDate = `${date.getDate()}/${
+                date.getMonth() + 1
+            }/${date.getFullYear()}`;
             if (storageDate !== strDate) {
-                addGems();
+                setGemsToAdd(gemsToAddCalc);
                 localStorage.setItem("date", strDate);
             }
         } else {
-            var strDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+            setGemsToAdd(gemsToAddCalc);
+            var date = new Date();
+            var strDate = `${date.getDate()}/${
+                date.getMonth() + 1
+            }/${date.getFullYear()}`;
             localStorage.setItem("date", strDate);
         }
     }, []);
@@ -44,6 +54,13 @@ const WorkoutCompleted = () => {
                 <div className="confetti-piece"></div>
             </div>
 
+            <div className="gems">
+                <p className="gems-to-add">
+                    {gemsToAdd > 0 ? `+${gemsToAdd}` : ""}
+                </p>
+                <Gem />
+            </div>
+
             <h1>
                 Entrainement
                 <br /> Terminé
@@ -52,6 +69,10 @@ const WorkoutCompleted = () => {
             <button
                 className="main-button"
                 onClick={() => {
+                    localStorage.setItem("series", `${series + 1}`);
+                    if (gemsToAdd > 0) {
+                        addGems();
+                    }
                     navigate("/");
                 }}
             >
