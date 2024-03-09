@@ -29,8 +29,8 @@
             "purpose": "maskable"
         }
     ],
-    "id": "./Yogapi/",
-    "start_url": "./Yogapi/",
+    "id": "/Yogapi/",
+    "start_url": "/Yogapi/",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"
