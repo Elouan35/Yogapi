@@ -10,7 +10,7 @@ self.addEventListener("install", (event) => {
         })
     );
 
-    console.log(`${VERSION} Install`);
+    console.log(`${CACHE_VERSION} Install`);
 });
 
 self.addEventListener("activate", (event) => {
@@ -26,7 +26,7 @@ self.addEventListener("activate", (event) => {
         })
     );
 
-    console.log(`${VERSION} Active`);
+    console.log(`${CACHE_VERSION} Active`);
 });
 
 self.addEventListener("fetch", (event) => {
