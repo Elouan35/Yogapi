@@ -7,7 +7,6 @@ import { ReactComponent as TimerFlower } from "../../Images/Elements/TimerFlower
 import { ReactComponent as Play } from "../../Images/Icons/play.svg";
 import { ReactComponent as Pause } from "../../Images/Icons/pause.svg";
 import PopUpMenu from "../../components/PopUpMenu";
-import { wait } from "@testing-library/user-event/dist/utils";
 
 const Workout = () => {
     const navigate = useNavigate();
