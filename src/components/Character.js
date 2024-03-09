@@ -3,10 +3,16 @@ import { ReactComponent as Simple } from "../Images/Characters/character-simple.
 import { ReactComponent as Wonder } from "../Images/Characters/character-wonder.svg";
 
 const Character = () => {
-    const [character, setCharacter] = useState();
+    const [character, setCharacter] = useState("simple");
 
     useEffect(() => {
-        setCharacter("simple");
+        var characterStorage = localStorage.getItem("character");
+        if (characterStorage) {
+            setCharacter(characterStorage);
+        } else {
+            setCharacter("simple");
+            localStorage.setItem("character", "simple");
+        }
     }, []);
 
     window.addEventListener("mousemove", (e) => {
@@ -51,12 +57,13 @@ const Character = () => {
                 } else {
                     py = 0;
                     sy = 1 - ((y - positions.y) / positions.y) * 0.08;
+                    console.log(sy, Math.round(sy * 1000) / 1000);
                 }
 
                 const keyframes = {
-                    transform: `translate(${Math.round(px * 10000) / 10000}%, ${
-                        Math.round(py * 10000) / 10000
-                    }%) scaleY(${Math.round(sy * 10000) / 10000})`,
+                    transform: `translate(${Math.round(px * 1000) / 1000}%, ${
+                        Math.round(py * 1000) / 1000
+                    }%) scaleY(${Math.round(sy * 100) / 100})`,
                 };
 
                 eye.animate(keyframes, {
