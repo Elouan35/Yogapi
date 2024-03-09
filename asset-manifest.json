@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Yogapi/static/css/main.803c0317.css",
-    "main.js": "/Yogapi/static/js/main.c30eadfd.js",
+    "main.js": "/Yogapi/static/js/main.e1608499.js",
     "static/media/FredokaOne-Regular.ttf": "/Yogapi/static/media/FredokaOne-Regular.4aea26dd6637dfac0fac.ttf",
     "static/media/character-wonder.svg": "/Yogapi/static/media/character-wonder.3291f961f8c50f6fa93ad109e401fc72.svg",
     "static/media/character-simple.svg": "/Yogapi/static/media/character-simple.57c679b593e4f775040dcf7ec75da23c.svg",
@@ -18,10 +18,10 @@
     "static/media/hand.svg": "/Yogapi/static/media/hand.056baa845e935c69c4d8e03dbcfd1df1.svg",
     "static/media/play.svg": "/Yogapi/static/media/play.44cb6508a9227bd04b0c2f3fa4819eb3.svg",
     "main.803c0317.css.map": "/Yogapi/static/css/main.803c0317.css.map",
-    "main.c30eadfd.js.map": "/Yogapi/static/js/main.c30eadfd.js.map"
+    "main.e1608499.js.map": "/Yogapi/static/js/main.e1608499.js.map"
   },
   "entrypoints": [
     "static/css/main.803c0317.css",
-    "static/js/main.c30eadfd.js"
+    "static/js/main.e1608499.js"
   ]
 }
