@@ -1,7 +1,7 @@
 const CACHE_VERSION = "v1.0.0";
 var urlsToCache = ["/Yogapi/"];
 
-self.addEventListener("install", () => {
+self.addEventListener("install", (event) => {
     self.skipWaiting();
 
     event.waitUntil(
@@ -25,6 +25,7 @@ self.addEventListener("activate", (event) => {
             );
         })
     );
+
     console.log(`${VERSION} Active`);
 });
 
