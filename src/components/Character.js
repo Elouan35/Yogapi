@@ -6,12 +6,19 @@ const Character = () => {
     const [character, setCharacter] = useState("simple");
 
     useEffect(() => {
-        var characterStorage = localStorage.getItem("character");
-        if (characterStorage) {
-            setCharacter(characterStorage);
+        var currentDate = new Date();
+        if (
+            `${currentDate.getDate()}/${currentDate.getMonth() + 1}` === "10/3"
+        ) {
+            setCharacter("wonder");
         } else {
-            setCharacter("simple");
-            localStorage.setItem("character", "simple");
+            var characterStorage = localStorage.getItem("character");
+            if (characterStorage) {
+                setCharacter(characterStorage);
+            } else {
+                setCharacter("simple");
+                localStorage.setItem("character", "simple");
+            }
         }
     }, []);
 
@@ -57,7 +64,6 @@ const Character = () => {
                 } else {
                     py = 0;
                     sy = 1 - ((y - positions.y) / positions.y) * 0.08;
-                    console.log(sy, Math.round(sy * 1000) / 1000);
                 }
 
                 const keyframes = {
