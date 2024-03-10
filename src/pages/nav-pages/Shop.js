@@ -73,7 +73,7 @@ const Shop = () => {
                 >
                     <h3>{charactersToUnlock[0][0]}</h3>
                     <Wonder
-                        className={`character ${
+                        className={`character-to-buy ${
                             charactersToUnlock[0][0].length > 0 ? "not-buy" : ""
                         }`}
                     />

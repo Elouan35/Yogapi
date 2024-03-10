@@ -11,10 +11,6 @@ const WorkoutCompleted = () => {
     const gems = parseInt(localStorage.getItem("gems"));
     const gemsToAddCalc = 10 * ((series % 6) + 1);
 
-    const addGems = () => {
-        localStorage.setItem("gems", `${gems + gemsToAdd}`);
-    };
-
     useEffect(() => {
         var storageDate = localStorage.getItem("date");
         if (storageDate) {
@@ -22,10 +18,8 @@ const WorkoutCompleted = () => {
             var strDate = `${date.getDate()}/${
                 date.getMonth() + 1
             }/${date.getFullYear()}`;
-            if (storageDate !== strDate) {
-                setGemsToAdd(gemsToAddCalc);
-                localStorage.setItem("date", strDate);
-            }
+            setGemsToAdd(gemsToAddCalc);
+            localStorage.setItem("date", strDate);
         } else {
             setGemsToAdd(gemsToAddCalc);
             var date = new Date();
@@ -71,7 +65,7 @@ const WorkoutCompleted = () => {
                 onClick={() => {
                     localStorage.setItem("series", `${series + 1}`);
                     if (gemsToAdd > 0) {
-                        addGems();
+                        localStorage.setItem("gems", `${gems + gemsToAdd}`);
                     }
                     navigate("/");
                 }}

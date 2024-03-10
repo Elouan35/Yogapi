@@ -30,21 +30,13 @@
     text-transform: uppercase;
 }
 
-.shop .styles .style .character.not-buy {
+.shop .styles .style .character-to-buy.not-buy {
     filter: grayscale(1);
 }
 
-.shop .styles .style .character {
+.shop .styles .style .character-to-buy {
     width: 100%;
     max-height: 20vh;
-}
-
-.shop .styles .style .character #head {
-    animation: none !important;
-}
-
-.shop .styles .style .character #head #eyes {
-    animation: none !important;
 }
 
 .shop .styles .style .prize {
