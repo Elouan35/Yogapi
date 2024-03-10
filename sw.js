@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1.0.1";
+const CACHE_VERSION = "v1.0.2";
 var urlsToCache = ["./"];
 
 self.addEventListener("install", (event) => {
